@@ -1,0 +1,9 @@
+// Zimmerdialog
+
++ * zimmer
+- Gern. Welches ist Ihre Lieblingsfarbe?{topic=zimmerauswahl}
+
+> topic zimmerauswahl
++ *
+- Hier ist der Schlüssel für das Zimmer in <star>. Darf ich Ihnen etwas anbieten?{topic=wunder}
+< topic

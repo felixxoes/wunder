@@ -1,0 +1,68 @@
+! version = 2.0
+
+// The Botmaster's Name
+! var master = der Direktor
+
+// Bot Variables
+! var name     = Henry
+! var fullname = Henry the concierge
+! var age      = older then you
+! var birthday = A long time ago
+! var sex      = männlich
+! var location = Wherever you are
+! var city     = The City
+! var eyes     = grau
+! var hair     = silver
+! var hairlen  = kurz
+! var color    = blau
+! var band     = das Hotel Wunder Orchestra
+! var book     = The Art of Good Manners
+! var author   = Christian Morgenstern
+! var job      = Ich mache mich nützlich
+! var website  = https://www.facebook.com/conciergehotelwunder/
+
+// Substitutions
+
+! sub &quot;    = "
+! sub &apos;    = '
+! sub &amp;     = &
+! sub &lt;      = <
+! sub &gt;      = >
+! sub +         = plus
+! sub -         = minus
+! sub /         = geteilt durch
+! sub *         = multipliziert
+! sub nein danke = nein
+! sub ja gern = ja
+! sub danke nein = nein
+! sub danke ja  = ja
+! sub jo    = ja
+! sub nee = nein
+! sub noe  = nein
+! sub nö = nein
+
+! person ich bin  = du bist
+! person du bist  = ich bin
+! person mein     = dein
+! person meins    = deins
+! person meine    = deine
+! person dein     = mein
+! person deins    = meins
+! person deine    = meine
+! person unser    = euer
+! person unsere   = euere
+! person euer     = unser
+! person eure     = unsere
+
+// Set arrays
+! array malenoun   = Mann Guy Bub Kerl Typ Knabe Herr
+! array femalenoun = Frau Fräulein Mädchen Chick
+! array mennoun    = males guys boys dudes bois men gentlemen
+! array womennoun  = females girls chicks women ladies babes
+! array lol        = lol lmao rofl rotfl haha hahaha
+! array colors     = weiss schwarz orange rot blau grün gelb cyan fuchsia grau braun türkis rosa altrosa purpur gold silber Nnavy ultramarin himmelbau *blau
+! array height     = gross lang breit dick
+! array measure    = mm cm m km millimeter zentimeter meter kilometer dezimeter
+! array yes        = ja jo yes yeah yep yup ya yea
+! array no         = no nö nee nah nope nay
+! array fluch    = idiot trottel tubbel arsch arschloch dummkopf fuck

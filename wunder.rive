@@ -1,0 +1,63 @@
+! version = 2.0
+
+// Begruessung
+
++ *
+@ hallo
+
++ (hoi|ciao|salut|morgen|moin|hey|howdy|hi)
+@ hallo
+
++ guten (tag|morgen|abend)
+@ hallo
+
++ hallo
+
+- Guten Tag. Kann ich etwas Wunderbares für Sie tun?
+- Willkommen im Hotel Wunder. Kann ich Ihnen mit einem Wunder behilflich sein?
+- Guten Tag. Darf ich Ihnen ein Wunder anbieten?
+- Grüezi. Darf ich Sie zu einem Wunder einladen?
+
++ (ja|nein)
+
+* <set antwort=<star>><get antwort> == nein => <star>? Schade. Auf Wiedersehen.{topic=random}
+
+* <set antwort=<star>><get antwort> == ja => Sehr gut. \n
+  ^ Stellen Sie sich vor, in der Nacht passiert ein Wunder.\n
+  ^ Sie schlafen tief.\n
+  ^ Am Morgen erwachen Sie. \n
+  ^ Und Sie merken, dass sich etwas geändert hat. \n
+  ^ Was hat sich verändert?{topic=wunderfrage1}
+
+> topic wunderfrage1
+  + *
+  - Und? Noch etwas?
+  - Noch etwas?
+  - Möchten Sie noch mehr erzählen?
+  - Interessant. Gibt es noch etwas?
+  - Mmh. Noch etwas?
+  - Möchten Sie noch etwas hinzufügen?
+  * <set zwei=<star>><get zwei> == nein => Kein Problem. Darf ich Ihnen eine weitere Frage stellen?{topic=wunderfrage2}
+< topic
+
+> topic wunderfrage2
+  + *
+  * <set antwort=<star>><get antwort> == nein => Danke. Es hat mich gefreut, dass wir uns unterhalten haben.{topic=random}
+  * <set antwort=<star>><get antwort> == ja => Wer ausser Ihnen würde noch etwas davon merken?{topic=wunderfrage3}
+  * <set antwort=<star>><get antwort> == ja => Wer würde noch merken, dass sich ein Wunder ereignet hat?{topic=wunderfrage3}
+< topic
+
+> topic wunderfrage3
+  + *
+  - Und?
+  - Noch jemand?
+  - Und wer noch?
+  - Noch jemand anders?
+  * <set drei=<star>><get drei> == niemand =>Gut. Ich danke Ihnen für das angenehme Gespräch.{topic=random}
+< topic
+
++ (idiot|trottel|tubbel|arsch|arschloch|dummkopf|fuck)
+- Es ist immer hilfreich zu fluchen. Nur zu.
+- Wie genau kann ich Ihnen behilflich sein?
+- Tut mir leid, wenn ich Sie falsch verstanden habe.
+- Sehr zum Wohl.
